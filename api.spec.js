@@ -25,7 +25,7 @@ const body = {
 describe ('API testing', function() {
     this.timeout(30000);
 //Method get
-    it.skip ('get sukses', async function () {
+    it ('get sukses', async function () {
         const response = await request(baseUrl)
         .get(endPointGet)
         .expect(200);
@@ -35,13 +35,13 @@ describe ('API testing', function() {
         console.log(response.statusCode)
     });
 
-    it.skip ('sukses with param', async function () {
+    it ('sukses with param', async function () {
         const response = await request(baseUrl)
         .get(endPointGetSpecific)
         console.log('response.body')
         console.log(response.body)
     });
-    it.skip(
+    it(
         'get sukses', async function () {
 
         const response = await request(baseUrl)
